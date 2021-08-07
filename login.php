@@ -45,11 +45,13 @@ if(isset($_GET["prisijungti"])) {
                 header("Location: login.php");
                 
             } else {
-                echo "Bandykite jungtis is naujo";
+                // echo "Bandykite jungtis is naujo";
+                $zinute1 = "Bandykite jungtis is naujo";
             }
 
         } else {
-            echo "Laukeliai yra tusti";
+            // echo "Laukeliai yra tusti";
+            $zinute2 = "Laukeliai yra tusti";
         }
             
     }
@@ -294,7 +296,7 @@ if(isset($_GET["prisijungti"])) {
 
     <div class="left-column">
         <div class="left-column-container">
-            <h1>Sign up</h1>
+            <h1>Sign in</h1>
             <div class="links">
                 <a href="#">Privacy policy</a>
                 <p>&</p>
@@ -318,6 +320,10 @@ if(isset($_GET["prisijungti"])) {
                                 <button type="submit" name="prisijungti" class="btn">Log In</button>
                                 <p>or</p>
                                 <a href="http://localhost/mokymosi_projektai/2021-08-05%20PHP%20paskaita/forgot.php">Forgot pasword</a>  
+                            </div>
+                            <div> 
+                                <?php if(isset($zinute1)) { echo $zinute1;} ?>
+                                <?php if(isset($zinute2)) { echo $zinute2;} ?>
                             </div>
                         </form>
                 </div>

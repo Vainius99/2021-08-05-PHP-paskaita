@@ -1,3 +1,12 @@
+<?php
+
+if(isset($_COOKIE['prisijungti']) && isset($_COOKIE['teises'])) {
+    header("Location: manopaskyra.php");
+} else { 
+    $sign_in = "http://localhost/mokymosi_projektai/2021-08-05%20PHP%20paskaita/login.php";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -274,7 +283,7 @@
                 <div class="right-column-bottom-action">
                     <button class="btn">Get started</button>
                     <p>or</p>
-                    <a href="http://localhost/mokymosi_projektai/2021-08-05%20PHP%20paskaita/login.php">Sign in</a>
+                    <a href= <?php echo $sign_in; ?>>Sign in</a>
                 </div>
             </div>
         </div>

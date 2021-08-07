@@ -1,3 +1,14 @@
+<?php
+
+if(isset($_COOKIE['prisijungti']) && isset($_COOKIE['teises'])) {
+    // $sign_up = "http://localhost/mokymosi_projektai/2021-08-05%20PHP%20paskaita/manopaskyra.php";
+    header("Location: manopaskyra.php"); 
+} else { 
+    $sign_up = "http://localhost/mokymosi_projektai/2021-08-05%20PHP%20paskaita/signup.php";
+    // header("Location: forgot.php"); 
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -275,7 +286,7 @@
                 <div class="right-column-bottom-action">
                     <button class="btn">Remind</button>
                     <p>or</p>
-                    <a href="http://localhost/mokymosi_projektai/2021-08-05%20PHP%20paskaita/signup.php">Sign up</a>
+                    <a href= <?php echo $sign_up; ?>> Sign up</a>
                 </div>
             </div>
         </div>
